@@ -1,3 +1,4 @@
+{{-- le footer --}}
 <div class="footer">
 	    	<div class="container">
 

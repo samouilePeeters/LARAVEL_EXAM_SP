@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WorksController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,13 +13,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-require __DIR__.'/works.php';
-
-Route::get('/', function () {
-    return view('home.index');
-});
 
 
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
+
+
+Route::get('/works/{work}', [WorksController::class, 'show'])
+->name('work.show')
+;
